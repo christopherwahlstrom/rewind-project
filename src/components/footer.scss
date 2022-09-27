@@ -1,2 +1,20 @@
+@use '../base';
 
+
+.footer-section {
+    height: 184px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: base.$clr-background-footer;
+}
+
+.copyright {
+    
+}
+
+p, a {
+    color: #fff;
+}
 
