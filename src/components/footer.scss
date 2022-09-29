@@ -1,2 +1,36 @@
+@use '../base';
 
 
+.footer-section {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-areas: 'copyright copyright  socialmedia';
+    align-items: center;
+    min-height: 184px;
+    background-color: base.$clr-background-footer;
+    color: base.$clr-text;
+}
+
+.copyright {
+    grid-area: copyright;
+    font-size: 20px;
+    padding: 2rem; 
+    line-height: 1.6;
+}
+
+
+.socialmedia  {
+    grid-area: socialmedia;
+    grid-gap: 2rem;
+    padding: 2rem ;
+}
+
+a {
+    text-decoration: none;
+    line-height: 2rem;
+    color: base.$clr-text;
+}
+
+img {
+    padding: 0.5rem;
+}

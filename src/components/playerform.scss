@@ -1,0 +1,74 @@
+@use '../base';
+
+@mixin fonts-form-info {
+    font-family: 'Roboto';
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin-top: 1.5rem;
+    color: base.$clr-text;
+}
+
+.form-container {
+    display: flex;
+    margin-left: 5rem;
+}
+
+.frm-input  {
+    width: 17rem;
+    height: 2.3rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.addgame-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+
+.form-title {
+    color: base.$clr-text;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+.form-subtitle {
+    @include fonts-form-info;
+    padding-top: 3.5rem;
+    font-size: 22px;
+}
+
+.form-info {
+    @include  fonts-form-info;
+}
+
+
+.add-result-btn {
+    color: base.$clr-text;
+    background-color: #EFA802;
+    width: 19rem;
+    height: 4rem;
+    margin-top: 4rem;
+    border-radius: 15px;
+    font-size: 32px;
+    border: none;
+    letter-spacing: 1.2px;
+
+    &:hover {
+        color: #000;
+        font-size: 33px;
+        cursor: pointer;
+    }
+}
+
+.downarrow {
+    display:flex;
+    justify-content: center;
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}

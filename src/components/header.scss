@@ -1,0 +1,26 @@
+@use '../base';
+
+
+
+.header-section {
+    background-color: base.$clr-background-header;
+    display: flex;
+    align-items: center;
+    padding: 1.4rem;
+    overflow: hidden;
+}
+
+.logo {
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+.header-headline {
+    color: base.$clr-text;
+    cursor: pointer;
+}
+
+.header-subline {
+    color: base.$clr-text;
+    cursor: pointer;
+}
