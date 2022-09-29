@@ -7,7 +7,7 @@ const Leaderboard = () => {
 
     return (
         <>
-        STATS
+        LEADERBOARDS AND STATS SECTION
         </>
     )
 }
