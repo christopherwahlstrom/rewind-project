@@ -10,24 +10,19 @@ const Footer = () => {
             <article className='copyright'>
                 <p>2022@ Tracker Network </p>
                 <a href='#'>Privacy Policy</a>
-                <a href='#'>Support</a>
-                <a href='#'>Developer API</a>
-                <a href='#'>Press Kit</a>
-            </article>
-            <article className='trademark-info'>
-                <p>CS  is a registered trademark of CWAR. Trademarks are the property of their respective owners. Game      materials copyright CWAR. 
-                CWAR has not endorsed and is not responsible for this site or its content.
+                
+                <p>Trademarks are the property of their respective owners. Game      materials copyright CWAR. 
                 </p>
             </article>
-            <article className="socialMedia">
+            <article className="socialmedia">
                 <a href="#" className="socialmedia-icons">
-                    <img src="../images/twitter-icon.png" alt="twitter"/>
+                    <img src="../images/twitter-icon.svg" alt="twitter"/>
                 </a>
                 <a href="#" className="socialmedia-icons">
-                    <img src="../images/insta-icon.png" alt="instagram"/>
+                    <img src="../images/insta-icon.svg" alt="instagram"/>
                 </a>
                 <a href="#" className="socialmedia-icons">
-                    <img src="../images/discord-icon.png" alt="discord"/>
+                    <img src="../images/discord-icon.svg" alt="discord"/>
                 </a>
             </article>
         </section>
