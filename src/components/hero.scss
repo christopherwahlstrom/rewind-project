@@ -1,8 +1,10 @@
 @use '../base';
 
 .main-hero {
-    background: url("./public/images/background-image.png") center center / cover no-repeat;
+    background: url("./images/background-image.png") center center / cover no-repeat;
     padding: 0;
     width: 100vw;
-    height: 100%;    
+    // height: calc(100vh - 113px);
+    max-height: 1005px;
 }
+
