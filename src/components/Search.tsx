@@ -1,0 +1,21 @@
+import './search.scss'
+import { PlayerDis } from '../models/data';
+
+interface Props {
+    players: PlayerDis[];
+    doSearch: (event: any) => void;
+}
+
+
+function Search({players, doSearch}: Props ) {
+    
+
+    return (
+        <section className='search'>
+            <input className='search-field' placeholder='Search:     Player, Win, Date' 
+            onChange={doSearch}  />
+        </section>
+    )
+}
+
+export default Search;

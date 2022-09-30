@@ -1,0 +1,22 @@
+@use '../base';
+
+.leaderboard-container {
+    background-color: base.$clr-background;
+}
+
+
+
+.leaderboard-title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: base.$clr-text;
+    font-family: base.$font-text;
+    font-size: 1rem;
+}
+
+.leaderboard-title > img {
+    padding: 1rem;
+}
