@@ -1,10 +1,11 @@
 import './playerform.scss'
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Modal from './Modal';
 
-/* Eventuellt add a modal */
 
 const PlayerForm = () => {
-
+    const navigate = useNavigate();
     const [name, setname] = useState('');
     const [openModal, setOpenModal] = useState(false)
     let  infoArray: any[] = [];
@@ -37,7 +38,7 @@ const PlayerForm = () => {
 
                     <button className='add-result-btn'>ADD RESULT</button>
                 </form>
-                {openModal && <Modal username={name} closeModal={setOpenModal}/>}
+                {openModal && <Modal playername={name} closeModal={setOpenModal}/>}
             </section>
             <article className='downarrow'>
                 <img src="/images/double-down.png" alt="downarrow"></img>

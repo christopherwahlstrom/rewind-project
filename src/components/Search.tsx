@@ -12,7 +12,7 @@ function Search({players, doSearch}: Props ) {
 
     return (
         <section className='search'>
-            <input className='search-field' placeholder='Search:     Player, Win, Date' 
+            <input className='search-field' placeholder='Search words: Name, Win, Lost, Date' 
             onChange={doSearch}  />
         </section>
     )

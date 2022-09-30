@@ -1,10 +1,9 @@
 import './footer.scss'
-import { useNavigate } from 'react-router-dom'
+
 
 
 const Footer = () => {
-    const navigate = useNavigate();
-
+    
     return (
         <section className='footer-section'>
             <article className='copyright'>

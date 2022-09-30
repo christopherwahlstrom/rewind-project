@@ -3,61 +3,61 @@
         {
             "name":"Dreamos",
             "date": "2022-05-16",
-            "result": true,
+            "result": "Win",
             "gameId": 1
         },
         {
             "name":"Nyox",
             "date": "2022-09-01",
-            "result": true,
+            "result": "Win",
             "gameId": 2 
         },
         {
             "name":"Jojo",
             "date": "2022-03-10",
-            "result": true,
+            "result": "Win",
             "gameId": 3
         },
         {
             "name":"OpRodger",
             "date": "2022-05-30",
-            "result": false,
+            "result": "Lost",
             "gameId": 4
         },
         {
             "name":"SergantZero",
             "date": "2022-07-08",
-            "result": false,
+            "result": "Lost",
             "gameId": 5
         },
         {
             "name":"King",
             "date": "2022-09-01",
-            "result": true,
+            "result": "Win",
             "gameId": 6
         },
         {
             "name":"WildOne",
             "date": "2022-05-22",
-            "result": true,
+            "result": "Win",
             "gameId": 7
         },
         {
             "name":"Dreamos",
             "date": "2022-08-30",
-            "result": true,
+            "result": "Win",
             "gameId": 8
         },
         {
             "name":"✘Molly",
             "date": "2022-09-11",
-            "result": true,
+            "result": "Win",
             "gameId": 9
         },
         {
             "name":"dean36963",
             "date": "2022-05-10",
-            "result": false,
+            "result": "Lost",
             "gameId": 10
         }
     ]

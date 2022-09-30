@@ -1,9 +1,8 @@
 import './header.scss'
-import { useNavigate } from 'react-router'
+
 
 const Header = () => {
-    const navigate = useNavigate();
-
+    
     return (
         <header className='header-section'>
             <div className='logo'>

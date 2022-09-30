@@ -1,0 +1,54 @@
+@use "/src/_animation.scss";
+@use '../base';
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: #000000af;
+}
+
+.modal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background-color: #f0ebe3;
+    border-radius: 15px;
+    width: 20rem;
+    height: 20rem;
+    @include animation.Bounce-up;
+    .modal-h1{
+        font-size: 1rem;
+    }
+
+    .modal-p {
+        padding: 2rem;
+    }
+    
+    .modal-button{
+        color: base.$clr-text;
+        background-color: #EFA802;
+        width: 14rem;
+        height: 4rem;
+        margin-top: 4rem;
+        border-radius: 15px;
+        font-size: 22px;
+        letter-spacing: 1px;
+        border: none;
+    
+    
+        &:hover {
+            color: #000;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+}

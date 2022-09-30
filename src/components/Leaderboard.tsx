@@ -1,11 +1,16 @@
-import './leaderboard.scss'
-import { useNavigate } from 'react-router-dom'
-import Search from './Search'
-import PlayerCard from './PlayerCard'
+import PlayerGrid from './PlayerGrid';
+import Search from './Search';
+import './leaderboard.scss';
+import { useState } from "react";
+import { PlayerDis } from '../models/data';
+import jsonData from '../players.json'
+
+
+
 
 const Leaderboard = () => {
-    const navigate = useNavigate();
-
+    const [players, setPlayers] = useState<PlayerDis[]>(jsonData.players)
+    
     return (
         <>
             <section className='leaderboard-container'>
@@ -14,12 +19,7 @@ const Leaderboard = () => {
                     <h1>LEADERBOARD STATS</h1>
                     <img src="../images/trophy.svg" alt="cup" />
                 </div>
-                <Search players={players} doSearch={doSearch} />
-                <article>
-
-                </article>
-                <PlayerCard players={players}/>
-
+                <PlayerGrid players={players} />
             </section>
         </>
     )

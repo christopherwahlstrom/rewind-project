@@ -1,0 +1,28 @@
+@use '../base';
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    max-width: 100vw;
+    height: 5rem; 
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #000;
+    color: #fff;
+    font-family: base.$font-text;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    font-family: base.$font-text;
+    font-size: base.$font-size-stats;
+}
