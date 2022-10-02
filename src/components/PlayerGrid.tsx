@@ -15,7 +15,7 @@ type newplayerType = {
 };
 
 const PlayerGrid = ({players, playerOnClick}: Props) => {
-    const [filteredPlayers, setfilteredPlayers] = useState(players)
+    const [filteredPlayers, setfilteredPlayers] = useState([])
     const [searchedData, setsearchedData] = useState('')
     const [fecthPlayer, setFetchedPlayer] = useState<newplayerType>({})
 
@@ -26,19 +26,17 @@ const PlayerGrid = ({players, playerOnClick}: Props) => {
         console.log("The game", event.target.value);
     }
 
-
+    // set filteredPlayers to players if players changes
     useEffect(() => {
-       var test = localStorage.getItem("name")
-       setFetchedPlayer(JSON.parse(test))
-    }, [])
+        setfilteredPlayers(players);
+    }, [players])
     
-
     return (
         <>
             <Search players={players} doSearch={doSearch} />
                 <article className='stats-info'>
                     <h3>GAME</h3>
-                    <h3>PLAYER</h3>
+                    <h3>NAME</h3>
                     <h3>RESULT</h3>
                     <h3>DATE</h3>
                 </article>
@@ -53,8 +51,7 @@ const PlayerGrid = ({players, playerOnClick}: Props) => {
 
                 }).map(player => (
                     <PlayerCard key={player.gameId} player={player} playerOnClick={playerOnClick}/> 
-                ))} 
-                
+                ))}    
             </section>   
         </>  
     )

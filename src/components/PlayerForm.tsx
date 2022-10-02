@@ -16,15 +16,17 @@ const PlayerForm = () => {
     const [name, setname] = useState('');
     const [openModal, setOpenModal] = useState(false)
     const [newplayer, setNewPlayer] = useState<newplayerType>({});  
-    let  infoArray: any[] = [];
     
     const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        infoArray.push(name);
-        console.log(infoArray);
+
         {setOpenModal(true)}
-        
-        localStorage.setItem("players", JSON.stringify(newplayer));
+        const currentPlayers = JSON.parse(localStorage.getItem("players")); // get the current players in the localstorage
+        newplayer.gameId = currentPlayers.length + 1; // add a gameId based on the number of previous games
+        currentPlayers.push(newplayer); // add the new player to the array
+        localStorage.setItem("players", JSON.stringify(currentPlayers)); // add the array with the new player to the localstorage
+        const storageEvent = new Event('storageChange');  // create event to tell leaderboard when localstorage changes
+        document.dispatchEvent(storageEvent) // send event
     }
     
     return (
