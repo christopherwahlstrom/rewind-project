@@ -3,9 +3,9 @@ import './App.scss'
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./Views/LandingPage";
 
+
 function App() {
   
-
   return (
     <div className="App">
       <Routes>

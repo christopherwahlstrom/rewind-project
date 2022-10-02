@@ -4,12 +4,12 @@ import './leaderboard.scss';
 import { useState } from "react";
 import { PlayerDis } from '../models/data';
 import jsonData from '../players.json'
-
-
+import { useEffect } from 'react';
 
 
 const Leaderboard = () => {
     const [players, setPlayers] = useState<PlayerDis[]>(jsonData.players)
+
     
     return (
         <>
