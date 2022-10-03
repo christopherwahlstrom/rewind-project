@@ -39,7 +39,7 @@ const PlayerForm = () => {
 
                     <h3 className='form-info'>Name</h3>
                     <label className='frm-label' htmlFor="name">name</label>
-                    <input className='frm-input' type="text" id='name' default={name}  
+                    <input className='frm-input' type="text" id='name'  
                     onChange={(e) => 
                         setNewPlayer({
                             date: newplayer.date,
@@ -50,7 +50,7 @@ const PlayerForm = () => {
 
                     <h3 className='form-info'>Result</h3>
                     <label className='frm-label' htmlFor="result">Result</label>
-                    <input className='frm-input' type="text" id='result' default={name}
+                    <input className='frm-input' type="text" id='result' 
                     onChange={(e) => 
                         setNewPlayer({
                             date: newplayer.date,
@@ -61,7 +61,7 @@ const PlayerForm = () => {
 
                     <h3 className='form-info'>Date</h3>
                     <label  className='frm-label' htmlFor="date">Result</label>
-                    <input className='frm-input' type="text" id='date' default={name} 
+                    <input className='frm-input' type="text" id='date'  
                     onChange={e => setNewPlayer({
                         date: e.target.value,
                             gameId: newplayer.gameId,
