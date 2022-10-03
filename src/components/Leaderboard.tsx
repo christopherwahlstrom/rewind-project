@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 const Leaderboard = () => {
     // get the players from the localStorage or from jsonData if there is nothing in localstorage
     const [players, setPlayers] = useState<PlayerDis[]>(JSON.parse(localStorage.getItem("players")) || []);
-
+    
     useEffect(() => {
         // add an event to detect changes in the localStorage
         document.addEventListener('storageChange', () => {
@@ -25,6 +25,8 @@ const Leaderboard = () => {
         });
     }, [])
 
+    console.log(localStorage);
+    
     return (
         <>
             <section className='leaderboard-container'>

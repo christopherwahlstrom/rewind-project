@@ -4,7 +4,6 @@ import './playercard.scss'
 
 interface Props {
     player: PlayerDis;
-    playerOnClick: (player: any) => void;
 }
 
 const PlayerCard = ({player}: Props) => {

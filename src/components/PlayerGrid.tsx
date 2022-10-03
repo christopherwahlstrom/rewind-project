@@ -5,19 +5,13 @@ import Search from './Search';
 
 interface Props {
     players: PlayerDis[];
-    playerOnClick: (gameId: number) => void;
 }
-type newplayerType = {   
-    name?: string;
-    date?: string;
-    result?: string;
-    gameId?: string; 
-};
 
-const PlayerGrid = ({players, playerOnClick}: Props) => {
-    const [filteredPlayers, setfilteredPlayers] = useState([])
+
+const PlayerGrid = ({players}: Props) => {
+    const [filteredPlayers, setfilteredPlayers] = useState<PlayerDis[]>([])
     const [searchedData, setsearchedData] = useState('')
-    const [fecthPlayer, setFetchedPlayer] = useState<newplayerType>({})
+   
 
     function doSearch(event: any) {
         let inputSearch = event.target.value
@@ -50,7 +44,7 @@ const PlayerGrid = ({players, playerOnClick}: Props) => {
                     }
 
                 }).map(player => (
-                    <PlayerCard key={player.gameId} player={player} playerOnClick={playerOnClick}/> 
+                    <PlayerCard key={player.gameId} player={player} /> 
                 ))}    
             </section>   
         </>  
