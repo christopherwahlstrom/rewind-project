@@ -2,6 +2,8 @@
 
 Works according to preferences for the Rewvind project!
 
+Har lagt med localstorage i arbetet som en level up
+
 Render link : https://rewind-project.onrender.com
 
 Add players.
