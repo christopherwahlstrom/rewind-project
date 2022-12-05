@@ -2,7 +2,7 @@ import './playerform.scss'
 import { useState } from 'react';
 import Modal from './Modal';
 import { useEffect } from 'react';
-
+import 
 
 
 type newplayerType = {  
@@ -38,7 +38,7 @@ const PlayerForm = () => {
                     <h2 className='form-subtitle'>Player</h2>
 
                     <h3 className='form-info'>Name</h3>
-                    <label className='frm-label' htmlFor="name">name</label>
+                    <label className='frm-label' htmlFor="name"></label>
                     <input className='frm-input' type="text" id='name'  
                     onChange={(e) => 
                         setNewPlayer({
@@ -49,7 +49,7 @@ const PlayerForm = () => {
                             })} required placeholder='  Enter : Player name' />
 
                     <h3 className='form-info'>Result</h3>
-                    <label className='frm-label' htmlFor="result">Result</label>
+                    <label className='frm-label' htmlFor="result"></label>
                     <input className='frm-input' type="text" id='result' 
                     onChange={(e) => 
                         setNewPlayer({
@@ -60,7 +60,7 @@ const PlayerForm = () => {
                             })} required  placeholder='  Enter result : Win or Lost'/>
 
                     <h3 className='form-info'>Date</h3>
-                    <label  className='frm-label' htmlFor="date">Result</label>
+                    <label  className='frm-label' htmlFor="date"></label>
                     <input className='frm-input' type="text" id='date'  
                     onChange={e => setNewPlayer({
                         date: e.target.value,

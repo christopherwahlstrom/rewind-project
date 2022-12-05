@@ -9,7 +9,7 @@ const Hero = () => {
     return (
         <section className='main-hero'>
             <article>
-                <PlayerForm />
+                <PlayerForm /> 
             </article>
         </section>
     )
