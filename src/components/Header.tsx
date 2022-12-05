@@ -1,20 +1,20 @@
 import './header.scss'
-
+import logo from  '../assets/images/logo.svg'
 
 const Header = () => {
     
     return (
         <header className='header-section'>
             <div className='logo'>
-                <img src="../images/logo.png" alt="logo-pic" />
+                <img src={logo} alt="logo-pic" />
             </div>
             
             <div className='header-text'>
                 <h1 className='header-headline'>
-                CS: GO STATS
+                CSS: GO STATS
                 </h1>
                 <h3 className='header-subline'>
-                Add detailed Stats and Check Leaderboard
+                Your site for detailed stats
                 </h3>
             </div>
         </header>

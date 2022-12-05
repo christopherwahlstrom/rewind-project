@@ -1,11 +1,9 @@
 import PlayerGrid from './PlayerGrid';
-import Search from './Search';
 import './leaderboard.scss';
 import { useState } from "react";
 import { PlayerDis } from '../models/data';
-import jsonData from '../players.json'
 import { useEffect } from 'react';
-
+import trophy from '../assets/images/trophy.svg'
 
 const Leaderboard = () => {
     // get the players from the localStorage or from jsonData if there is nothing in localstorage
@@ -25,15 +23,15 @@ const Leaderboard = () => {
         });
     }, [])
 
-    console.log(localStorage);
+    // console.log(localStorage);
     
     return (
         <>
             <section className='leaderboard-container'>
                 <div className='leaderboard-title'>
-                    <img src="../images/trophy.svg" alt="cup" />
+                    <img src={trophy} alt="trophy-cup" />
                     <h1>LEADERBOARD STATS</h1>
-                    <img src="../images/trophy.svg" alt="cup" />
+                    <img src={trophy} alt="trophy-cup" />
                 </div>
                 <PlayerGrid players={players} />
             </section>

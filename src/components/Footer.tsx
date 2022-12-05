@@ -1,6 +1,7 @@
 import './footer.scss'
-
-
+import twitter from '../assets/images/twitter-icon.svg'
+import insta from '../assets/images/insta-icon.svg'
+import discord from '../assets/images/discord-icon.svg'
 
 const Footer = () => {
     
@@ -15,13 +16,13 @@ const Footer = () => {
             </article>
             <article className="socialmedia">
                 <a href="#" className="socialmedia-icons">
-                    <img src="../images/twitter-icon.svg" alt="twitter"/>
+                    <img src={twitter} alt="twitter"/>
                 </a>
                 <a href="#" className="socialmedia-icons">
-                    <img src="../images/insta-icon.svg" alt="instagram"/>
+                    <img src={insta} alt="instagram"/>
                 </a>
                 <a href="#" className="socialmedia-icons">
-                    <img src="../images/discord-icon.svg" alt="discord"/>
+                    <img src={discord} alt="discord"/>
                 </a>
             </article>
         </section>

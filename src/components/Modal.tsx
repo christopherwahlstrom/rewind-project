@@ -18,7 +18,7 @@ const Modal = ({closeModal, playername}: Props) => {
         <section className='modal-container'>
             <article className='modal'>
                 <h1 className='modal-h1'>Your stats have been received</h1>
-                <p className='modal-p'>Player: {playername}</p>
+                <p className='modal-p'>{playername}</p>
                 <button className='modal-button' onClick={closeBtn}>CLOSE WINDOW</button>
             </article>
         </section>

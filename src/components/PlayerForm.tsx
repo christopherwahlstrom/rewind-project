@@ -1,8 +1,7 @@
 import './playerform.scss'
 import { useState } from 'react';
 import Modal from './Modal';
-import { useEffect } from 'react';
-import 
+
 
 
 type newplayerType = {  
@@ -33,11 +32,11 @@ const PlayerForm = () => {
         <>
             <section className="form-container">
                 <form className='addgame-form' onSubmit={submitForm}>
-                    <h1 className='form-title'>ADD NEW GAME</h1>
+                    <h1 className='form-title'>ADD NEW GAME STATS</h1>
                     
-                    <h2 className='form-subtitle'>Player</h2>
+                    <h2 className='form-subtitle'>Stats</h2>
 
-                    <h3 className='form-info'>Name</h3>
+                    <h3 className='form-info'>Player or players in game</h3>
                     <label className='frm-label' htmlFor="name"></label>
                     <input className='frm-input' type="text" id='name'  
                     onChange={(e) => 
@@ -46,7 +45,7 @@ const PlayerForm = () => {
                             gameId: newplayer.gameId,
                             name: e.target.value,
                             result: newplayer.result,
-                            })} required placeholder='  Enter : Player name' />
+                            })} required placeholder='  Name vs. Name ' />
 
                     <h3 className='form-info'>Result</h3>
                     <label className='frm-label' htmlFor="result"></label>
@@ -57,7 +56,7 @@ const PlayerForm = () => {
                             gameId: newplayer.gameId,
                             name: newplayer.name,
                             result: e.target.value,
-                            })} required  placeholder='  Enter result : Win or Lost'/>
+                            })} required  placeholder='  Enter your : Win or Lost'/>
 
                     <h3 className='form-info'>Date</h3>
                     <label  className='frm-label' htmlFor="date"></label>
@@ -67,7 +66,7 @@ const PlayerForm = () => {
                             gameId: newplayer.gameId,
                             name: newplayer.name,
                             result: newplayer.result,
-                            })} required maxLength={10} minLength={10} placeholder='  Enter:  YYYY-MM-DD'/>
+                            })} required maxLength={10} minLength={10} placeholder='  Enter date as:YYYY-MM-DD'/>
                     <button  className='add-result-btn'>ADD RESULT</button>
                 </form>
                 {openModal && <Modal playername={name} closeModal={setOpenModal}/>}
