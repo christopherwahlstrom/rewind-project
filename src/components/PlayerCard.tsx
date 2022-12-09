@@ -7,7 +7,11 @@ interface Props {
 }
 
 const PlayerCard = ({player}: Props) => {
-    
+    if (player.name == null) {
+        return null; 
+    }
+
+
     return (
         <section className="card" key={player.gameId}>
             <h3 className="stats" >{player.gameId}</h3>
