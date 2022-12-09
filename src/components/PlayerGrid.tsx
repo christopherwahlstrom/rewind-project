@@ -43,7 +43,7 @@ const PlayerGrid = ({players}: Props) => {
                         return choice
                     }
 
-                }).map(player => (
+                }).reverse().map(player => (
                     <PlayerCard key={player.gameId} player={player} /> 
                 ))}    
             </section>   
