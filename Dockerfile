@@ -10,9 +10,10 @@ RUN npm install
 
 COPY . .
 
+RUN tsc --force
+
 RUN npm run build
 
-RUN tsc --force
 
 EXPOSE 8080
 
