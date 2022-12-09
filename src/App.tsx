@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import './App.scss'
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./Views/LandingPage";

@@ -5,27 +5,32 @@ import Modal from './Modal';
 
 
 type newplayerType = {  
-    name: string;
-    date: string;
-    result: string;
-    gameId: string; 
+    name?: string;
+    date?: string;
+    result?: string;
+    gameId?: string; 
 };
 
 const PlayerForm = () => {
     const [name, setname] = useState('');
     const [openModal, setOpenModal] = useState(false)
-    const [newplayer, setNewPlayer] = useState<newplayerType>({});  
+    const [newplayer, setNewPlayer] = useState<newplayerType>({
+        name: '',
+        date: '',
+        result: '',
+        gameId: '',
+    });  
     
     const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         {setOpenModal(true)}
-        const currentPlayers = JSON.parse(localStorage.getItem("players")); // get the current players in the localstorage
-        newplayer.gameId = currentPlayers.length + 1; // add a gameId based on the number of previous games
-        currentPlayers.push(newplayer); // add the new player to the array
-        localStorage.setItem("players", JSON.stringify(currentPlayers)); // add the array with the new player to the localstorage
-        const storageEvent = new Event('storageChange');  // create event to tell leaderboard when localstorage changes
-        document.dispatchEvent(storageEvent) // send event
+        const currentPlayers = JSON.parse(localStorage.getItem("players") || [] ); 
+        newplayer.gameId = currentPlayers.length + 1;
+        currentPlayers.push(newplayer); 
+        localStorage.setItem("players", JSON.stringify(currentPlayers)); 
+        const storageEvent = new Event('storageChange');  
+        document.dispatchEvent(storageEvent) 
     }
     
     return (

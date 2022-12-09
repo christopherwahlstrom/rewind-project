@@ -12,6 +12,8 @@ COPY . .
 
 RUN npm run build
 
+RUN tsc --force
+
 EXPOSE 8080
 
 CMD ["http-server", "dist"]

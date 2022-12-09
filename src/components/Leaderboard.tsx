@@ -6,24 +6,21 @@ import { useEffect } from 'react';
 import trophy from '../assets/images/trophy.svg'
 
 const Leaderboard = () => {
-    // get the players from the localStorage or from jsonData if there is nothing in localstorage
-    const [players, setPlayers] = useState<PlayerDis[]>(JSON.parse(localStorage.getItem("players")) || []);
     
-    useEffect(() => {
-        // add an event to detect changes in the localStorage
+    const [players, setPlayers] = useState<PlayerDis[]>(JSON.parse(localStorage.getItem("players")) ?? [] );
+    
+    useEffect(() => {        
         document.addEventListener('storageChange', () => {
-            const allPlayers = JSON.parse(localStorage.getItem("players"));
+            const allPlayers = JSON.parse(localStorage.getItem("players") || []);
             setPlayers(allPlayers);
         }); 
 
-        // remove the event listener
         return () => document.removeEventListener('storageChange', () => {
-            const allPlayers = JSON.parse(localStorage.getItem("players"));
+            const allPlayers = JSON.parse(localStorage.getItem("players") || []);
             setPlayers(allPlayers);
         });
     }, [])
 
-    // console.log(localStorage);
     
     return (
         <>
