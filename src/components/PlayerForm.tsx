@@ -5,10 +5,10 @@ import Modal from './Modal';
 
 
 type newplayerType = {  
-    name?: string;
-    date?: string;
-    result?: string;
-    gameId?: string; 
+    name: string;
+    date: string;
+    result: string;
+    gameId: string; 
 };
 
 const PlayerForm = () => {
