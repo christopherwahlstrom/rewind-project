@@ -23,17 +23,24 @@ const PlayerForm = () => {
     });  
     
     const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-
         {setOpenModal(true)}
-        const currentPlayers = JSON.parse(localStorage.getItem("players") || [] ); 
+        const currentPlayers = JSON.parse(localStorage.getItem("players") || '[]' as any); 
         newplayer.gameId = currentPlayers.length + 1;
         currentPlayers.push(newplayer); 
         localStorage.setItem("players", JSON.stringify(currentPlayers)); 
         const storageEvent = new Event('storageChange');  
-        document.dispatchEvent(storageEvent) 
-    }
+        document.dispatchEvent(storageEvent);
+        setNewPlayer({
+            name: '',
+            date: '',
+            result: '',
+            gameId: '',
+          });
+          event.preventDefault();
+    };
     
+    
+
     return (
         <>
             <section className="form-container">
@@ -73,7 +80,7 @@ const PlayerForm = () => {
                             name: newplayer.name,
                             result: newplayer.result,
                             })} required maxLength={10} minLength={10} placeholder='  Enter date as:YYYY-MM-DD'/>
-                    <button  className='add-result-btn'>ADD RESULT</button>
+                    <button className='add-result-btn' >ADD RESULT</button>
                 </form>
                 {openModal && <Modal playername={name} closeModal={setOpenModal}/>}
             </section>

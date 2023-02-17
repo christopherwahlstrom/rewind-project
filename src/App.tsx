@@ -6,6 +6,7 @@ import jsonData from "./players.json"
 import React from 'react';
 
 function App() {
+  
 
   useEffect(() => {
     const currentPlayers = localStorage.getItem("players"); // get the current players out of the localstorage

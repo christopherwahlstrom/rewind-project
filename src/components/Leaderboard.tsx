@@ -12,12 +12,12 @@ const Leaderboard = () => {
   
     useEffect(() => {        
         document.addEventListener('storageChange', () => {
-            const allPlayers = JSON.parse(localStorage.getItem("players") || []);
+            const allPlayers = JSON.parse(localStorage.getItem("players") || '[]' as any);
             setPlayers(allPlayers);
         }); 
 
         return () => document.removeEventListener('storageChange', () => {
-            const allPlayers = JSON.parse(localStorage.getItem("players") || []);
+            const allPlayers = JSON.parse(localStorage.getItem("players") || '[]' as any);
             setPlayers(allPlayers);
         });
     }, [])
