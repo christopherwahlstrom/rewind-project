@@ -2,6 +2,7 @@ import { PlayerDis } from '../models/data'
 import PlayerCard from './PlayerCard';
 import { useEffect, useState } from "react";
 import Search from './Search';
+import React from 'react';
 
 interface Props {
     players: PlayerDis[];
@@ -14,13 +15,21 @@ const PlayerGrid = ({players}: Props) => {
    
 
     function doSearch(event: any) {
-        let inputSearch = event.target.value
-        let upperInputSearch = inputSearch.charAt(0).toUpperCase() + inputSearch.slice(1)
-        setsearchedData(upperInputSearch)
-        console.log("The game", event.target.value);
-    }
+        const searchTerm = event.target.value.trim();
+        const searchWords = searchTerm.split(/\s+/);
 
-    // set filteredPlayers to players if players changes
+
+        setsearchedData(searchTerm);
+
+        setfilteredPlayers(players.filter((player) => 
+            searchWords.every((word: string) => 
+                player.name.toLowerCase().includes(word.toLowerCase()) || player.date.toLowerCase().includes(word.toLowerCase()) || player.result.toLowerCase().includes(word.toLowerCase())
+            )
+        ));
+    }
+        
+
+    
     useEffect(() => {
         setfilteredPlayers(players);
     }, [players])

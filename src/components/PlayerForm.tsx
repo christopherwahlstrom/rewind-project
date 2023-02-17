@@ -1,6 +1,7 @@
 import './playerform.scss'
 import { useState } from 'react';
 import Modal from './Modal';
+import React from 'react';
 
 
 
@@ -12,7 +13,7 @@ type newplayerType = {
 };
 
 const PlayerForm = () => {
-    const [name, setname] = useState('');
+    const [name] = useState('');
     const [openModal, setOpenModal] = useState(false)
     const [newplayer, setNewPlayer] = useState<newplayerType>({
         name: '',

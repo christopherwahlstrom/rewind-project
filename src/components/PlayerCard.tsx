@@ -1,3 +1,4 @@
+import React from "react";
 import { PlayerDis } from "../models/data";
 import './playercard.scss'
 

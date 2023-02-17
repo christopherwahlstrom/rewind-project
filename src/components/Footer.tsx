@@ -2,6 +2,7 @@ import './footer.scss'
 import twitter from '../assets/images/twitter-icon.svg'
 import insta from '../assets/images/insta-icon.svg'
 import discord from '../assets/images/discord-icon.svg'
+import React from 'react'
 
 const Footer = () => {
     

@@ -1,5 +1,6 @@
 import './search.scss'
 import { PlayerDis } from '../models/data';
+import React from 'react';
 
 interface Props {
     players: PlayerDis[];

@@ -3,6 +3,7 @@ import './App.scss'
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./Views/LandingPage";
 import jsonData from "./players.json"
+import React from 'react';
 
 function App() {
 

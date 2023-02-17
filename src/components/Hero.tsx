@@ -1,3 +1,4 @@
+import React from 'react';
 import './hero.scss'
 import PlayerForm from './PlayerForm';
 

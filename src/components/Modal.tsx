@@ -1,5 +1,6 @@
 import './modal.scss'
 import { useNavigate } from 'react-router-dom'
+import React from 'react';
 
 interface Props {
     closeModal: (close: boolean) => void;
